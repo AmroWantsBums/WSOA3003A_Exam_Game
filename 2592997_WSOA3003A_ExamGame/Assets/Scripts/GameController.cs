@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI CountdownText;
     private float interval;
     private int Seconds = 10;
+    public GameObject Canvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,11 @@ public class GameController : MonoBehaviour
             interval = 0;
             Seconds--;
             CountdownText.text = $"{Seconds} seconds remaining";
+        }
+
+        if (Seconds == 0)
+        {
+            Canvas.SetActive(false);
         }
     }
 }
