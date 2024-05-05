@@ -22,6 +22,6 @@ public class NavMesh : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        navMeshAgent.destination = Location.position;
+        //navMeshAgent.destination = Location.position;
     }
 }
