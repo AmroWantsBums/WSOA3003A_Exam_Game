@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
 {
     public TextMeshProUGUI CountdownText;
     private float interval;
-    private int Seconds;
+    private int Seconds = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
+            interval = 0;
             Seconds--;
             CountdownText.text = $"{Seconds} seconds remaining";
         }
