@@ -654,6 +654,7 @@ GameObject:
   - component: {fileID: 497814861}
   - component: {fileID: 497814860}
   - component: {fileID: 497814862}
+  - component: {fileID: 497814863}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -809,7 +810,7 @@ MonoBehaviour:
   navMeshAgent: {fileID: 497814861}
   EnemyGun: {fileID: 224889125}
   Player: {fileID: 0}
-  BulletPrefab: {fileID: 8243387985130477955, guid: 2bb023198a453cb409d2e79588362dbb, type: 3}
+  BulletPrefab: {fileID: 8243387985130477955, guid: 5665ae3e22c37f44aac10fec8072c99e, type: 3}
   BulletSpeed: 280
   AttackPosition: {fileID: 1428001538}
   Attacked: 0
@@ -818,6 +819,19 @@ MonoBehaviour:
   - {fileID: 1814445926}
   Distance: 100
   aimSpeed: 2.61
+--- !u!114 &497814863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497814853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e674781b81a76d6408bce1e567470136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthPoints: 100
 --- !u!1 &646616608
 GameObject:
   m_ObjectHideFlags: 0
@@ -2333,9 +2347,9 @@ GameObject:
   - component: {fileID: 1863468438}
   - component: {fileID: 1863468437}
   - component: {fileID: 1863468442}
-  - component: {fileID: 1863468443}
   - component: {fileID: 1863468444}
   - component: {fileID: 1863468445}
+  - component: {fileID: 1863468446}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -2460,23 +2474,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1863468443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863468436}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a599ab85483e06469eea1788cb2faeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HealthPoints: 3
-  HealthSprites:
-  - {fileID: 1972281698}
-  - {fileID: 959978252}
-  - {fileID: 1505928990}
 --- !u!54 &1863468444
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2508,6 +2505,19 @@ MonoBehaviour:
   Grenade: {fileID: 6199623196464967574, guid: ff66c2408ff3c124a8bba0f9ab42d190, type: 3}
   SpawnPosition: {fileID: 108853190}
   GrenadeSpeed: 20
+--- !u!114 &1863468446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863468436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a599ab85483e06469eea1788cb2faeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthPoints: 100
 --- !u!1 &1917402521
 GameObject:
   m_ObjectHideFlags: 0

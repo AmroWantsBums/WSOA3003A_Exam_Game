@@ -23,7 +23,8 @@ public class BulletController : MonoBehaviour
     {
         if (col.gameObject.name == "Player")
         {
-            playerHealth.HealthPoints--;
+            playerHealth.HealthPoints = playerHealth.HealthPoints - 33.4f;
+            Destroy(gameObject);
         }
     }
 }

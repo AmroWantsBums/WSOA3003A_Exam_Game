@@ -13,9 +13,9 @@ TagManager:
   - UI
   - Barrier
   - Player
-  - Bullets
+  - PlayerBullet
   - Bombs
-  - 
+  - EnemyBullet
   - 
   - 
   - 

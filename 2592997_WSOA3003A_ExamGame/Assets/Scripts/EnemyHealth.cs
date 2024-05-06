@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
-    public float HealthPoints = 100;
+    public float HealthPoints = 100f;
     // Start is called before the first frame update
     void Start()
     {
