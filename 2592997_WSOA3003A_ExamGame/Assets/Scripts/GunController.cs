@@ -19,7 +19,6 @@ public class GunController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             GameObject bullet = Instantiate(BulletPrefab, SpawnPosition.position, Quaternion.identity);
-            Debug.Log("Spawned");
             Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
             if (bulletRigidbody != null)
             {
