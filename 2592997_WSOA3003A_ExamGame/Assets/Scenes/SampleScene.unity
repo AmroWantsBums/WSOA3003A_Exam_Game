@@ -308,7 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 8243387985130477955, guid: 2bb023198a453cb409d2e79588362dbb, type: 3}
   SpawnPosition: {fileID: 108853190}
-  BulletSpeed: 280
+  BulletSpeed: 75
 --- !u!1 &135620022
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +811,7 @@ MonoBehaviour:
   EnemyGun: {fileID: 224889125}
   Player: {fileID: 0}
   BulletPrefab: {fileID: 8243387985130477955, guid: 5665ae3e22c37f44aac10fec8072c99e, type: 3}
-  BulletSpeed: 280
+  BulletSpeed: 75
   AttackPosition: {fileID: 1428001538}
   Attacked: 0
   CoverPoints:
