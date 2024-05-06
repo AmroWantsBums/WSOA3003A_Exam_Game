@@ -14,6 +14,7 @@ public class EnemyController : MonoBehaviour
     public bool Attacked = false;
     public GameObject[] CoverPoints;
     public float Distance;
+    public float aimSpeed = 4.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,16 +27,27 @@ public class EnemyController : MonoBehaviour
     {
         if (navMeshAgent.remainingDistance == 0 && !Attacked)
         {
-            Debug.Log("Attack Player");
-            ShootPlayer();
+            AimAtPlayer();
+
         }
 
     }
 
-    public void ShootPlayer()
+    void AimAtPlayer()
     {
-        //Vector3 Direction = Player.transform.position - gameObject.transform.position;
-        //gameObject.transform.forward = Direction;
+        Vector3 playerDirection = Player.transform.position - transform.position;
+        Quaternion targetRotation = Quaternion.LookRotation(playerDirection);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, aimSpeed * Time.deltaTime);
+        if (Vector3.Dot(transform.forward, playerDirection.normalized) > 0.98f)
+        {
+            StartCoroutine(ShootPlayer());
+            Attacked = true;
+        }
+    }
+
+    IEnumerator ShootPlayer()
+    {
+        yield return new WaitForSeconds(1f);
         GameObject bullet = Instantiate(BulletPrefab, EnemyGun.position, Quaternion.identity);
         Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
         if (bulletRigidbody != null)
@@ -43,7 +55,6 @@ public class EnemyController : MonoBehaviour
             Vector3 Direction = Player.transform.position - gameObject.transform.position;
             Direction = Direction.normalized;
             bulletRigidbody.velocity = Direction * BulletSpeed;
-            Attacked = true;
             GoToCover();
         }
     }
