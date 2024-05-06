@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 224889128}
   - component: {fileID: 224889127}
   - component: {fileID: 224889126}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -655,7 +655,7 @@ GameObject:
   - component: {fileID: 497814860}
   - component: {fileID: 497814862}
   - component: {fileID: 497814863}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
