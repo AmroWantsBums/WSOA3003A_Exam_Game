@@ -56,11 +56,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0ba71692b2b3848b0cba1f1a54bd9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sphereRadius: 6.9
+  sphereRadius: 4.83
   maxDistance: 10
   layerMask:
     serializedVersion: 2
     m_Bits: 1911
+  enemyController: {fileID: 0}
 --- !u!23 &839590742350326989
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour
     public GameObject AttackPosition;
     public bool Attacked = false;
     public GameObject[] CoverPoints;
+    public List<GameObject> CoverPointss = new List<GameObject>();
     public float Distance;
     public float aimSpeed = 4.0f;
     // Start is called before the first frame update
@@ -61,7 +62,7 @@ public class EnemyController : MonoBehaviour
 
     public void GoToCover()
     {
-        foreach (GameObject f in CoverPoints)
+        foreach (GameObject f in CoverPointss)
         {
             if ((f.transform.position - Player.transform.position).magnitude < Distance)
             {

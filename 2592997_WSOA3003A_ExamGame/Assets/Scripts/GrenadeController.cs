@@ -29,7 +29,7 @@ public class GrenadeController : MonoBehaviour
         if (GrenadeRigidbody != null)
         {
             Vector3 throwDirection = gameObject.transform.forward; 
-            throwDirection.y += 0.4f; 
+            throwDirection.y += 0.2f; 
             GrenadeRigidbody.velocity = throwDirection.normalized * GrenadeSpeed;
         }
     }

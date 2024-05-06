@@ -817,6 +817,9 @@ MonoBehaviour:
   CoverPoints:
   - {fileID: 663392016}
   - {fileID: 1814445926}
+  CoverPointss:
+  - {fileID: 663392016}
+  - {fileID: 1814445926}
   Distance: 100
   aimSpeed: 2.61
 --- !u!114 &497814863
@@ -923,7 +926,7 @@ GameObject:
   - component: {fileID: 663392018}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: SafeSpace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2250,7 +2253,7 @@ GameObject:
   - component: {fileID: 1814445928}
   m_Layer: 0
   m_Name: Sphere (1)
-  m_TagString: Untagged
+  m_TagString: SafeSpace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2669,7 +2672,7 @@ GameObject:
   - component: {fileID: 2029108335}
   - component: {fileID: 2029108334}
   - component: {fileID: 2029108333}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
