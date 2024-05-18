@@ -2346,6 +2346,8 @@ MonoBehaviour:
   - {fileID: 6346109902146517285, guid: 64130407b40ded544b75a702e792d31b, type: 3}
   - {fileID: 7440417465209889724, guid: 2ef88114940c2704b802b79658afcfd0, type: 3}
   - {fileID: 732888430791509393, guid: 2d140ba6a29e0174c9b80f58c3a4bc2f, type: 3}
+  instantiateRotation: {x: 90, y: 0, z: 0}
+  CoachInstantiateRotation: {x: 0, y: 90, z: 0}
 --- !u!1001 &793718922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3718,7 +3720,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1454140956
 Transform:
   m_ObjectHideFlags: 0
@@ -5606,7 +5608,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029108332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 4.8, y: 7.47, z: 7.47}
   m_ConstrainProportionsScale: 0
   m_Children: []
