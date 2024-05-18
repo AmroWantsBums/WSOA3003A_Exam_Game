@@ -7,7 +7,7 @@ public class EnemyBulletController : MonoBehaviour
     public EnemyHealth enemyHealth;
     public GameObject Enemy;
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         Enemy = GameObject.Find("Enemy");
         enemyHealth = Enemy.GetComponent<EnemyHealth>();
@@ -26,5 +26,5 @@ public class EnemyBulletController : MonoBehaviour
             enemyHealth.HealthPoints = enemyHealth.HealthPoints - 33.4f;
             Destroy(gameObject);
         }
-    }
+    }*/
 }
