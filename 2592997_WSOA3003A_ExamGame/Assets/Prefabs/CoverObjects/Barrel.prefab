@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 2350348912149546693}
   - component: {fileID: 8332385577964780092}
   - component: {fileID: 2888473887575802216}
+  - component: {fileID: -909267329215043901}
   - component: {fileID: 5678576233251027221}
   - component: {fileID: 8915870203079570318}
   - component: {fileID: 3004875434731694816}
+  - component: {fileID: -2516759537156749484}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -103,6 +105,19 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &-909267329215043901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7754708751667400416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d58712570d3a14eacd123d2bfc3bc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 2
 --- !u!54 &5678576233251027221
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -147,3 +162,16 @@ CapsuleCollider:
   m_Height: 2.1
   m_Direction: 1
   m_Center: {x: 0, y: 0.82250017, z: 0}
+--- !u!114 &-2516759537156749484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7754708751667400416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac88af5f295dbb4f8aef82796e99f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaitTime: 20

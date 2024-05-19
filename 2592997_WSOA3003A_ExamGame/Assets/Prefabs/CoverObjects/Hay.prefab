@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 7947358615719824182}
   - component: {fileID: 1374079690650808576}
   - component: {fileID: 4624422046055140857}
+  - component: {fileID: 200173328279791467}
   - component: {fileID: 1988972977827690157}
   - component: {fileID: 5902940918121208033}
   - component: {fileID: -4167891752986153986}
+  - component: {fileID: 1283902510056891607}
   m_Layer: 0
   m_Name: Hay
   m_TagString: Untagged
@@ -87,6 +89,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &200173328279791467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6346109902146517285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d58712570d3a14eacd123d2bfc3bc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 3
 --- !u!111 &1988972977827690157
 Animation:
   m_ObjectHideFlags: 0
@@ -133,6 +148,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300012, guid: 964e2721afd4f244da5c39085c3bcef8, type: 3}
+--- !u!114 &1283902510056891607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6346109902146517285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac88af5f295dbb4f8aef82796e99f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaitTime: 20
 --- !u!1 &7071131346678088504
 GameObject:
   m_ObjectHideFlags: 0

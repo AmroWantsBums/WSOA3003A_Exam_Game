@@ -43,9 +43,11 @@ GameObject:
   - component: {fileID: 4644340795334667845}
   - component: {fileID: 1389512440803021500}
   - component: {fileID: 5260192308071229928}
+  - component: {fileID: -3090358608435786508}
   - component: {fileID: 4939665174008108737}
   - component: {fileID: 1058716199102772484}
   - component: {fileID: 2714341435194818816}
+  - component: {fileID: -5191852444610821398}
   m_Layer: 0
   m_Name: Coach
   m_TagString: Untagged
@@ -135,6 +137,19 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &-3090358608435786508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825386058452493920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d58712570d3a14eacd123d2bfc3bc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 5
 --- !u!54 &4939665174008108737
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -176,8 +191,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.7890003, y: 2.0499997, z: 4.2943935}
+  m_Size: {x: 1.7890003, y: 2.68, z: 4.2943935}
   m_Center: {x: 0, y: 1.3299999, z: 0}
+--- !u!114 &-5191852444610821398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825386058452493920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac88af5f295dbb4f8aef82796e99f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaitTime: 20
 --- !u!1 &5794430607694484473
 GameObject:
   m_ObjectHideFlags: 0

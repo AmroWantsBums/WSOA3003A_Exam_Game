@@ -21,33 +21,26 @@ public class CoverSpawner : MonoBehaviour
 
     void SpawnCover()
     {
-        int RandomNumber = Random.Range(1,2);
+        int RandomNumber = Random.Range(0,5);
         if (RandomNumber == 0)
         {
             Quaternion rotation = Quaternion.Euler(instantiateRotation);
             float SpawnZPos = Random.Range(-20f, 20f);
             Vector3 SpawnPosition = new Vector3(-16f, 0f, SpawnZPos);
             GameObject SpawnedObject = Instantiate(CoverPrefabs[RandomNumber], SpawnPosition, rotation);
-            Rigidbody ObjectRB = SpawnedObject.GetComponent<Rigidbody>();
-            ObjectRB.velocity = new Vector3(5f, 0f, 0f);
         }
-        else if (RandomNumber == 1)
+        else if (RandomNumber == 1 || RandomNumber == 3)
         {
             Quaternion rotation = Quaternion.Euler(CoachInstantiateRotation);
             float SpawnZPos = Random.Range(-20f, 20f);
-            Vector3 SpawnPosition = new Vector3(-16f, 0f, SpawnZPos);
+            Vector3 SpawnPosition = new Vector3(-10f, 0f, SpawnZPos);
             GameObject SpawnedObject = Instantiate(CoverPrefabs[RandomNumber], SpawnPosition, rotation);
-            Rigidbody ObjectRB = SpawnedObject.GetComponent<Rigidbody>();
-            ObjectRB.velocity = new Vector3(5f, 0f, 0f);
         }
         else 
         {
             float SpawnZPos = Random.Range(-20f, 20f);
             Vector3 SpawnPosition = new Vector3(-10f, 0f, SpawnZPos);
             GameObject SpawnedObject = Instantiate(CoverPrefabs[RandomNumber], SpawnPosition, Quaternion.identity);
-            Rigidbody ObjectRB = SpawnedObject.GetComponent<Rigidbody>();
-            ObjectRB.velocity = new Vector3(5f, 0f, 0f);
-
         }
         
     }

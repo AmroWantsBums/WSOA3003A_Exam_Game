@@ -11,10 +11,12 @@ GameObject:
   - component: {fileID: 4355235917754316674}
   - component: {fileID: 4696094713941036468}
   - component: {fileID: 1303625145214071117}
+  - component: {fileID: -5341195251661349618}
   - component: {fileID: 5305265729352714777}
   - component: {fileID: 6305947722031424680}
   - component: {fileID: -5656027584246717870}
-  m_Layer: 0
+  - component: {fileID: 3780096680682450406}
+  m_Layer: 13
   m_Name: Western_Wagon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,6 +90,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-5341195251661349618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732888430791509393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d58712570d3a14eacd123d2bfc3bc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 2
 --- !u!111 &5305265729352714777
 Animation:
   m_ObjectHideFlags: 0
@@ -134,6 +149,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: 846edcecb228de449a39371d15993dc4, type: 3}
+--- !u!114 &3780096680682450406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732888430791509393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac88af5f295dbb4f8aef82796e99f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaitTime: 20
 --- !u!1 &1319763054973653256
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +173,7 @@ GameObject:
   - component: {fileID: 2569613734812064378}
   - component: {fileID: 8198903549501190525}
   - component: {fileID: 6345709124880582558}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 832891451130199415}
   - component: {fileID: 3753105074004463083}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,5 +288,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.3428955, y: 3.7433536, z: 2.2354164}
+  m_Size: {x: 4.59, y: 3.7433536, z: 2.2354164}
   m_Center: {x: 0.21801376, y: -0.08175552, z: 0}
