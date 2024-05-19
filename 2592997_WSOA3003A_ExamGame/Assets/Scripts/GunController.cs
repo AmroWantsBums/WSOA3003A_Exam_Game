@@ -28,8 +28,10 @@ public class GunController : MonoBehaviour
         {
             if (CanShoot)
             {
-                Quaternion rotation = Quaternion.Euler(BulletRotation);
-                GameObject bullet = Instantiate(BulletPrefab, SpawnPosition.position, rotation);
+                Vector3 aimDirection = ADSView.transform.forward;
+                Quaternion bulletRotation = Quaternion.LookRotation(aimDirection);
+                //Quaternion rotation = Quaternion.Euler(BulletRotation);
+                GameObject bullet = Instantiate(BulletPrefab, SpawnPosition.position, bulletRotation);
                 Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
                 if (bulletRigidbody != null)
                 {
