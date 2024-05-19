@@ -11,12 +11,20 @@ public class CoverSpawner : MonoBehaviour
     void Start()
     {
         SpawnCover();
+        StartCoroutine(ResetTimer());
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    IEnumerator ResetTimer()
+    {
+        yield return new WaitForSeconds(10f);
+        SpawnCover();
+        StartCoroutine(ResetTimer());
     }
 
     void SpawnCover()
