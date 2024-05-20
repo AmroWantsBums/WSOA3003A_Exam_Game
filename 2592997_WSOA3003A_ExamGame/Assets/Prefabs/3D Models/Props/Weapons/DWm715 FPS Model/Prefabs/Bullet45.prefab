@@ -328,4 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
   Player: {fileID: 0}
+  Player2: {fileID: 0}
   Player2Health: {fileID: 0}
+  DamageCanvas: {fileID: 6775629193300053903, guid: 40c7b89cdb310bc40a023ecdd8475ad0, type: 3}
+  HeadshotDamageCanvas: {fileID: 5909687675946227206, guid: f8e155ca77353974a98c21330b69a0f7, type: 3}

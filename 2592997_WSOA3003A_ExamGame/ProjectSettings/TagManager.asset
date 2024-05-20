@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - SafeSpace
+  - Crates
   layers:
   - Default
   - TransparentFX
