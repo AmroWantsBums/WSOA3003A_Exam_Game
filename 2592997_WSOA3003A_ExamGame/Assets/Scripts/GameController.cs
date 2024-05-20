@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     private float interval;
     private int Seconds = 10;
     public GameObject Canvas;
+    public GameObject Barrier;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,7 @@ public class GameController : MonoBehaviour
         if (Seconds == 0)
         {
             Canvas.SetActive(false);
+            Barrier.SetActive(false);
         }
     }
 }
