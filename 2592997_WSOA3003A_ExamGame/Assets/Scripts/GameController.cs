@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     private int Seconds = 10;
     public GameObject Canvas;
     public GameObject Barrier;
+    public bool GameStarted = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +35,7 @@ public class GameController : MonoBehaviour
         {
             Canvas.SetActive(false);
             Barrier.SetActive(false);
+            GameStarted = true;
         }
     }
 }

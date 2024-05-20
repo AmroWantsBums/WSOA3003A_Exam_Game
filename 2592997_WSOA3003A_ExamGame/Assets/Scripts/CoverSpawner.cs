@@ -7,17 +7,23 @@ public class CoverSpawner : MonoBehaviour
     public GameObject[] CoverPrefabs;
     public Vector3 instantiateRotation;
     public Vector3 CoachInstantiateRotation;
+    public GameController GameController;
+    public bool Spawned = false;
     // Start is called before the first frame update
     void Start()
     {
-        SpawnCover();
-        StartCoroutine(ResetTimer());
+        GameController = GameObject.Find("Canvas").GetComponent<GameController>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameController.GameStarted && !Spawned)
+        {
+            StartCoroutine(ResetTimer());
+            Spawned = true;
+        }
     }
 
     IEnumerator ResetTimer()
