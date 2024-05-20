@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 39764137}
   - component: {fileID: 39764138}
   m_Layer: 0
-  m_Name: Player2Bodyshot
+  m_Name: Player2Headshot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5551,7 +5551,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651927722}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -5881,7 +5881,7 @@ GameObject:
   - component: {fileID: 1709745969}
   - component: {fileID: 1709745970}
   m_Layer: 0
-  m_Name: Player2Headshot
+  m_Name: Player2Bodyshot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

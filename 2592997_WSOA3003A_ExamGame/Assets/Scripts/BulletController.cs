@@ -23,7 +23,7 @@ public class BulletController : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log(col.gameObject.name);
+        
         if (col.gameObject.name == "Player")
         {
             Destroy(gameObject);
@@ -32,12 +32,14 @@ public class BulletController : MonoBehaviour
 
         if (col.gameObject.name == "Player2Headshot")
         {
+            Destroy(gameObject);
             Player2Health.HealthPoints = 0f;
             Debug.Log("Headshot");
         }
 
         if (col.gameObject.name == "Player2Bodyshot")
         {
+            Destroy(gameObject);
             Player2Health.HealthPoints = 0f;
             Debug.Log("BodyShot");
         }

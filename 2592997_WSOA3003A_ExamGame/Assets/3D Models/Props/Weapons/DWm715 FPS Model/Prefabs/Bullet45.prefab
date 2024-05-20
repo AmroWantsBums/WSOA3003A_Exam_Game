@@ -230,7 +230,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 174594}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.0042555705
   m_Height: 0.045585644
   m_Direction: 1
@@ -244,10 +244,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 435480}
-  - component: {fileID: -2636524500707115222}
   - component: {fileID: -6642714117980738647}
   - component: {fileID: 8565240689063801730}
   - component: {fileID: 5696204867847179534}
+  - component: {fileID: -8977346989758518646}
   m_Layer: 0
   m_Name: Bullet45
   m_TagString: Untagged
@@ -271,20 +271,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2636524500707115222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d2b030ca7438d74e9bdbfd08e3d2536, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyHealth: {fileID: 0}
-  Enemy: {fileID: 0}
 --- !u!114 &-6642714117980738647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,7 +310,22 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.004784576
+  m_Height: 0.046619654
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.02262482, z: 0.000005517108}
+--- !u!114 &-8977346989758518646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7821d31502cb693439de1849ac62e612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
+  Player: {fileID: 0}
+  Player2Health: {fileID: 0}
