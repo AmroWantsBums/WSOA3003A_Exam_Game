@@ -39,20 +39,20 @@ public class CoverSpawner : MonoBehaviour
         if (RandomNumber == 0)
         {
             Quaternion rotation = Quaternion.Euler(instantiateRotation);
-            float SpawnZPos = Random.Range(-30f, 20f);
+            float SpawnZPos = Random.Range(-20f, 20f);
             Vector3 SpawnPosition = new Vector3(-16f, 0f, SpawnZPos);
             GameObject SpawnedObject = Instantiate(CoverPrefabs[RandomNumber], SpawnPosition, rotation);
         }
         else if (RandomNumber == 1 || RandomNumber == 3)
         {
             Quaternion rotation = Quaternion.Euler(CoachInstantiateRotation);
-            float SpawnZPos = Random.Range(-30f, 20f);
+            float SpawnZPos = Random.Range(-20f, 20f);
             Vector3 SpawnPosition = new Vector3(-10f, 0f, SpawnZPos);
             GameObject SpawnedObject = Instantiate(CoverPrefabs[RandomNumber], SpawnPosition, rotation);
         }
         else 
         {
-            float SpawnZPos = Random.Range(-30f, 20f);
+            float SpawnZPos = Random.Range(-20f, 20f);
             Vector3 SpawnPosition = new Vector3(-10f, 0f, SpawnZPos);
             GameObject SpawnedObject = Instantiate(CoverPrefabs[RandomNumber], SpawnPosition, Quaternion.identity);
         }
