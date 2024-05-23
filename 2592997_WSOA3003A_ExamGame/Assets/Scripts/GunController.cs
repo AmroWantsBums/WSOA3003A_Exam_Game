@@ -16,6 +16,7 @@ public class GunController : MonoBehaviour
     public GameObject Crosshair;
     public playerMovement playerMovement;
     public Slider FireCooldown;
+    public float Seconds = 1.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +41,8 @@ public class GunController : MonoBehaviour
                     bulletRigidbody.velocity = transform.forward * BulletSpeed;
                 }
                 CanShoot = false;
-                StartCoroutine(GunCooldown());
+                Seconds = 1.5f;
+                //StartCoroutine(GunCooldown());
             }            
         }
 
@@ -59,15 +61,29 @@ public class GunController : MonoBehaviour
             Crosshair.SetActive(true);
             playerMovement.lookSpeed = 2;
         }
+        
+        if (!CanShoot)
+        {            
+            if (Seconds > 0)
+            {
+                Seconds = Seconds - Time.deltaTime;
+                FireCooldown.value = Seconds/1.5f;
+                Crosshair.SetActive(false);
+            }
+            else
+            {
+                CanShoot = true;
+                Crosshair.SetActive(true);
+            }
+        }
     }
 
-    IEnumerator GunCooldown()
+    /*IEnumerator GunCooldown()
     {
-        float Seconds = 1.5f;
         yield return new WaitForSeconds(Seconds);
         //FireCooldown.value = Seconds
         Debug.Log(Seconds);
         CanShoot = true;
-    }
+    }*/
 
 }
