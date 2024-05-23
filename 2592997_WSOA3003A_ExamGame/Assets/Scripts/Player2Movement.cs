@@ -42,7 +42,7 @@ public class Player2Movement : MonoBehaviour
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
         #endregion
 
-        #region Handles Jumping
+        /*#region Handles Jumping
         if (Input.GetButton("Jump") && canMove && _characterController.isGrounded)
         {
             moveDirection.y = JumpPower;
@@ -56,7 +56,7 @@ public class Player2Movement : MonoBehaviour
         {
             moveDirection.y -= gravity * Time.deltaTime;
         }
-        #endregion
+        #endregion*/
 
         #region Handles Rotation
         _characterController.Move(moveDirection * Time.deltaTime);

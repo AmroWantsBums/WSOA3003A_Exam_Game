@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GunController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GunController : MonoBehaviour
     public Camera ADSView;
     public GameObject Crosshair;
     public playerMovement playerMovement;
+    public Slider FireCooldown;
 
     // Start is called before the first frame update
     void Start()
@@ -61,7 +63,10 @@ public class GunController : MonoBehaviour
 
     IEnumerator GunCooldown()
     {
-        yield return new WaitForSeconds(1.5f);
+        float Seconds = 1.5f;
+        yield return new WaitForSeconds(Seconds);
+        //FireCooldown.value = Seconds
+        Debug.Log(Seconds);
         CanShoot = true;
     }
 
