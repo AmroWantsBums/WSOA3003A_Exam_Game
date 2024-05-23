@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GunController : MonoBehaviour
+public class Player2GunController : MonoBehaviour
 {
     public GameObject BulletPrefab;
     public Transform SpawnPosition;
@@ -14,7 +14,7 @@ public class GunController : MonoBehaviour
     public Camera NormalView;
     public Camera ADSView;
     public GameObject Crosshair;
-    public playerMovement playerMovement;
+    public Player2Movement player2Movement;
     public Slider FireCooldown;
     public float Seconds = 1.5f;
 
@@ -22,13 +22,14 @@ public class GunController : MonoBehaviour
     void Start()
     {
         ADSView.enabled = false;
-        playerMovement = GameObject.Find("Player").GetComponent<playerMovement>();
+        player2Movement = GameObject.Find("Player2").GetComponent<Player2Movement>();
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButton("R2Trigger"))
         {
+            Debug.Log("Fired");
             if (CanShoot)
             {
                 Vector3 aimDirection = NormalView.transform.up;
@@ -41,31 +42,31 @@ public class GunController : MonoBehaviour
                 }
                 CanShoot = false;
                 Seconds = 1.5f;
-            }            
+            }
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetButton("L2Trigger"))
         {
             NormalView.enabled = false;
             ADSView.enabled = true;
             Crosshair.SetActive(false);
-            playerMovement.lookSpeed = 1f;
+            player2Movement.lookSpeed = 1f;
         }
 
-        if (Input.GetMouseButtonUp(1))
+        if (Input.GetButton("L2Trigger"))
         {
             NormalView.enabled = true;
             ADSView.enabled = false;
             Crosshair.SetActive(true);
-            playerMovement.lookSpeed = 2;
+            player2Movement.lookSpeed = 2;
         }
-        
+
         if (!CanShoot)
-        {            
+        {
             if (Seconds > 0)
             {
                 Seconds = Seconds - Time.deltaTime;
-                FireCooldown.value = Seconds/1.5f;
+                FireCooldown.value = Seconds / 1.5f;
                 Crosshair.SetActive(false);
             }
             else
