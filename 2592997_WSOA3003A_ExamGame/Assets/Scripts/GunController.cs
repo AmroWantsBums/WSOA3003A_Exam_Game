@@ -17,12 +17,16 @@ public class GunController : MonoBehaviour
     public playerMovement playerMovement;
     public Slider FireCooldown;
     public float Seconds = 1.5f;
+    public Animator Player1Animator;
+    public GameObject Model;
 
     // Start is called before the first frame update
     void Start()
     {
         ADSView.enabled = false;
         playerMovement = GameObject.Find("Player").GetComponent<playerMovement>();
+        Model = GameObject.Find("Player1Model");
+        Player1Animator = Model.GetComponent<Animator>();
     }
 
     void Update()
@@ -50,6 +54,7 @@ public class GunController : MonoBehaviour
             ADSView.enabled = true;
             Crosshair.SetActive(false);
             playerMovement.lookSpeed = 1f;
+            Player1Animator.SetBool("IsAiming", true);
         }
 
         if (Input.GetMouseButtonUp(1))
@@ -58,6 +63,7 @@ public class GunController : MonoBehaviour
             ADSView.enabled = false;
             Crosshair.SetActive(true);
             playerMovement.lookSpeed = 2;
+            Player1Animator.SetBool("IsAiming", false);
         }
         
         if (!CanShoot)
