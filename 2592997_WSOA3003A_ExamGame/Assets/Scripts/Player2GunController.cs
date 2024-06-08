@@ -27,7 +27,7 @@ public class Player2GunController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButton("R2Trigger"))
+        if (Input.GetAxis("R2Trigger") > -0.02f)
         {
             Debug.Log("Fired");
             if (CanShoot)
@@ -45,20 +45,24 @@ public class Player2GunController : MonoBehaviour
             }
         }
 
-        if (Input.GetButton("L2Trigger"))
+        if (Input.GetAxis("L2Trigger") > -0.02f)
         {
             NormalView.enabled = false;
             ADSView.enabled = true;
             Crosshair.SetActive(false);
             player2Movement.lookSpeed = 1f;
         }
-
-        if (Input.GetButton("L2Trigger"))
+        else
         {
             NormalView.enabled = true;
             ADSView.enabled = false;
             Crosshair.SetActive(true);
             player2Movement.lookSpeed = 2;
+        }
+
+        if (Input.GetButton("L2Trigger"))
+        {
+           
         }
 
         if (!CanShoot)

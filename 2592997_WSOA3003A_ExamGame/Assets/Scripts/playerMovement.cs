@@ -50,7 +50,7 @@ public class playerMovement : MonoBehaviour
 
         #region Handles Jumping
 
-        if (Input.GetButton("Jump") && canMove && _characterController.isGrounded)
+        /*if (Input.GetButton("Jump") && canMove && _characterController.isGrounded)
         {
             moveDirection.y = JumpPower;
         }
@@ -62,7 +62,7 @@ public class playerMovement : MonoBehaviour
         if (!_characterController.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
-        }
+        }*/
         #endregion
 
         #region Handles Rotation

@@ -30,7 +30,7 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1
-    dead: 0.001
+    dead: 0.6
     sensitivity: 3
     snap: 1
     invert: 0
@@ -45,13 +45,13 @@ InputManager:
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 1000
+    gravity: 1
     dead: 0.001
-    sensitivity: 1000
+    sensitivity: 3
     snap: 0
     invert: 0
-    type: 0
-    axis: 13
+    type: 2
+    axis: 3
     joyNum: 0
   - serializedVersion: 3
     m_Name: MouseHorizontal
@@ -94,7 +94,7 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1
-    dead: 0.001
+    dead: 0.57
     sensitivity: 3
     snap: 1
     invert: 1
@@ -109,13 +109,13 @@ InputManager:
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 1
-    dead: 0.001
-    sensitivity: 3
-    snap: 1
-    invert: 1
+    gravity: 1000
+    dead: 0
+    sensitivity: 0.1
+    snap: 0
+    invert: 0
     type: 2
-    axis: 9
+    axis: 4
     joyNum: 0
   - serializedVersion: 3
     m_Name: MouseVertical
@@ -222,12 +222,12 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: 0
-    sensitivity: 2
+    dead: 0.05
+    sensitivity: 0.125
     snap: 0
     invert: 0
     type: 2
-    axis: 3
+    axis: 2
     joyNum: 0
   - serializedVersion: 3
     m_Name: Mouse Y
@@ -254,12 +254,12 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: 0
-    sensitivity: 1
+    dead: 0.05
+    sensitivity: 0.125
     snap: 0
     invert: 0
     type: 2
-    axis: 4
+    axis: 5
     joyNum: 0
   - serializedVersion: 3
     m_Name: Mouse ScrollWheel
@@ -390,7 +390,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Jump
+    m_Name: 
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
