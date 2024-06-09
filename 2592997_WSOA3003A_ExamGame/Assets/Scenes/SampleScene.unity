@@ -4315,8 +4315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 7034571375471627010, guid: ff39ebd1f52ed4a4782bd628111a800c, type: 3}
-  SpawnPosition: {fileID: 1651927723}
-  BulletSpeed: 5
+  SpawnPosition: {fileID: 963194228}
+  BulletSpeed: 48.61
   CanShoot: 1
   BulletRotation: {x: 0, y: 0, z: 0}
   Camera: {fileID: 963194225}
@@ -9619,3 +9619,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.846201, y: 2.525694, z: 0.3450001}
   m_Center: {x: 0.23831254, y: 1.247153, z: 0.022501906}
+--- !u!1001 &6329179755679907313
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4094969553176633038, guid: 98aa9bfc3af2c0f4fabf855c600884ee, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094969553176633038, guid: 98aa9bfc3af2c0f4fabf855c600884ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.118569
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094969553176633038, guid: 98aa9bfc3af2c0f4fabf855c600884ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094969553176633038, guid: 98aa9bfc3af2c0f4fabf855c600884ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094969553176633038, guid: 98aa9bfc3af2c0f4fabf855c600884ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094969553176633038, guid: 98aa9bfc3af2c0f4fabf855c600884ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094969553176633038, guid: 98aa9bfc3af2c0f4fabf855c600884ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094969553176633038, guid: 98aa9bfc3af2c0f4fabf855c600884ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094969553176633038, guid: 98aa9bfc3af2c0f4fabf855c600884ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094969553176633038, guid: 98aa9bfc3af2c0f4fabf855c600884ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094969553176633038, guid: 98aa9bfc3af2c0f4fabf855c600884ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094969553176855278, guid: 98aa9bfc3af2c0f4fabf855c600884ee, type: 3}
+      propertyPath: m_Name
+      value: Bullet45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094969553176855278, guid: 98aa9bfc3af2c0f4fabf855c600884ee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 98aa9bfc3af2c0f4fabf855c600884ee, type: 3}
