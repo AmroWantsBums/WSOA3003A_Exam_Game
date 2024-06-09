@@ -17,8 +17,8 @@ public class BulletController : MonoBehaviour
     {
         Player = GameObject.Find("Player");
         Player2 = GameObject.Find("Player2");
-        playerHealth = Player.GetComponent<PlayerHealth>();
-        Player2Health = GameObject.Find("Player2").GetComponent<Player2Health>();
+        //playerHealth = Player.GetComponent<PlayerHealth>();
+        //Player2Health = GameObject.Find("Player2").GetComponent<Player2Health>();
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class BulletController : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision col)
+    /*void OnCollisionEnter(Collision col)
     {
         
         if (col.gameObject.name == "Player")
@@ -75,5 +75,5 @@ public class BulletController : MonoBehaviour
         Quaternion rotation = Quaternion.LookRotation(direction);
         Vector3 SpawnPosition = new Vector3(Player2.transform.position.x, Player2.transform.position.y + 2, Player2.transform.position.z);
         Instantiate(HeadshotDamageCanvas, SpawnPosition, rotation);
-    }
+    }*/
 }
