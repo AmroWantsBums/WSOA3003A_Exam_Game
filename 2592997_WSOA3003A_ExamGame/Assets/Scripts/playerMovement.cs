@@ -23,6 +23,8 @@ public class playerMovement : MonoBehaviour
 
 
     private CharacterController _characterController;
+    public Animator Player1Animator;
+    public GunController gunController;
 
     public void Start()
     {
@@ -43,6 +45,15 @@ public class playerMovement : MonoBehaviour
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
         float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("MouseVertical") : 0;
         float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("MouseHorizontal") : 0;
+        if (Input.GetKey(KeyCode.W) && !gunController.IsShooting)
+        {
+            Player1Animator.SetBool("IsRunning", true);
+        }
+        else
+        {
+            Player1Animator.SetBool("IsRunning", false);
+            Debug.Log("Set to false");
+        }
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 

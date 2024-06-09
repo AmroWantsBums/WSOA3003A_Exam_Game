@@ -18,15 +18,13 @@ public class GunController : MonoBehaviour
     public Slider FireCooldown;
     public float Seconds = 1.5f;
     public Animator Player1Animator;
-    public GameObject Model;
+    public bool IsShooting = false;
 
     // Start is called before the first frame update
     void Start()
     {
         ADSView.enabled = false;
         playerMovement = GameObject.Find("Player").GetComponent<playerMovement>();
-        Model = GameObject.Find("Player1Model");
-        Player1Animator = Model.GetComponent<Animator>();
     }
 
     void Update()
@@ -35,16 +33,19 @@ public class GunController : MonoBehaviour
         {
             if (CanShoot)
             {
+                Player1Animator.SetBool("IsShooting", true);
                 Vector3 aimDirection = NormalView.transform.up;
                 Quaternion bulletRotation = Quaternion.LookRotation(aimDirection);
                 GameObject bullet = Instantiate(BulletPrefab, SpawnPosition.position, bulletRotation);
                 Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
+                IsShooting = true;
                 if (bulletRigidbody != null)
                 {
                     bulletRigidbody.velocity = transform.forward * BulletSpeed;
                 }
                 CanShoot = false;
-                Seconds = 1.5f;
+                Seconds = 1f;
+
             }            
         }
 
@@ -78,6 +79,8 @@ public class GunController : MonoBehaviour
             {
                 CanShoot = true;
                 Crosshair.SetActive(true);
+                Player1Animator.SetBool("IsShooting", false);
+                IsShooting = false;
             }
         }
     }
