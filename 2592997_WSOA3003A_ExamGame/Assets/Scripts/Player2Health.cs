@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player2Health : MonoBehaviour
 {
     public float HealthPoints = 100f;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,9 @@ public class Player2Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (HealthPoints < 0)
+        {
+            animator.SetBool("IsDying", true);
+        }
     }
 }

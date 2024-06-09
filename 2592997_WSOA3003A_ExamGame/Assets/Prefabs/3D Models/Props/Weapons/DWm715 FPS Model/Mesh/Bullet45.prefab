@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4806529775522732340}
   - component: {fileID: 3601416761128402288}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 7034571375471335200}
   - component: {fileID: 7034571375472662272}
   - component: {fileID: 7034571375473628608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 5254334908393542461}
   - component: {fileID: -9180899795364015966}
   - component: {fileID: 8361014544169656691}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bullet45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 7034571375471335204}
   - component: {fileID: 7034571375472662274}
   - component: {fileID: 7034571375473628610}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shell
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -17,17 +17,17 @@ public class BulletController : MonoBehaviour
     {
         Player = GameObject.Find("Player");
         Player2 = GameObject.Find("Player2");
-        //playerHealth = Player.GetComponent<PlayerHealth>();
-        //Player2Health = GameObject.Find("Player2").GetComponent<Player2Health>();
+        playerHealth = Player.GetComponent<PlayerHealth>();
+        Player2Health = GameObject.Find("Player2").GetComponent<Player2Health>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
-    /*void OnCollisionEnter(Collision col)
+    void OnCollisionEnter(Collision col)
     {
         
         if (col.gameObject.name == "Player")
@@ -39,7 +39,7 @@ public class BulletController : MonoBehaviour
         if (col.gameObject.name == "Player2Headshot")
         {
             Destroy(gameObject);
-            Player2Health.HealthPoints = 0f;
+            Player2Health.HealthPoints = playerHealth.HealthPoints - 70f;
             Debug.Log("Headshot");
             HeadshotCanvas();
         }
@@ -64,7 +64,7 @@ public class BulletController : MonoBehaviour
         Vector3 direction = Player2.transform.position - Player.transform.position;
         direction = Vector3.Normalize(direction);
         Quaternion rotation = Quaternion.LookRotation(direction);
-        Vector3 SpawnPosition = new Vector3(Player2.transform.position.x, Player2.transform.position.y + 2, Player2.transform.position.z);
+        Vector3 SpawnPosition = new Vector3(Player2.transform.position.x, Player2.transform.position.y + 3.5f, Player2.transform.position.z);
         Instantiate(DamageCanvas, SpawnPosition, rotation);
     }
 
@@ -73,7 +73,7 @@ public class BulletController : MonoBehaviour
         Vector3 direction = Player2.transform.position - Player.transform.position;
         direction = Vector3.Normalize(direction);
         Quaternion rotation = Quaternion.LookRotation(direction);
-        Vector3 SpawnPosition = new Vector3(Player2.transform.position.x, Player2.transform.position.y + 2, Player2.transform.position.z);
+        Vector3 SpawnPosition = new Vector3(Player2.transform.position.x, Player2.transform.position.y + 3.5f, Player2.transform.position.z);
         Instantiate(HeadshotDamageCanvas, SpawnPosition, rotation);
-    }*/
+    }
 }
