@@ -19,6 +19,8 @@ public class GunController : MonoBehaviour
     public float Seconds = 1.5f;
     public Animator Player1Animator;
     public bool IsShooting = false;
+    public GameObject ADSBone;
+    public bool ADSing = false;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +33,22 @@ public class GunController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (CanShoot)
+            if (CanShoot && ADSing)
+            {
+                Player1Animator.SetBool("IsShooting", true);
+                Vector3 aimDirection = ADSBone.transform.forward;
+                Quaternion bulletRotation = Quaternion.LookRotation(aimDirection);
+                GameObject bullet = Instantiate(BulletPrefab, SpawnPosition.position, bulletRotation);
+                Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
+                IsShooting = true;
+                if (bulletRigidbody != null)
+                {
+                    bulletRigidbody.velocity = transform.forward * BulletSpeed;
+                }
+                CanShoot = false;
+                Seconds = 1f;
+            }
+            else
             {
                 Player1Animator.SetBool("IsShooting", true);
                 Vector3 aimDirection = NormalView.transform.up;
@@ -56,6 +73,8 @@ public class GunController : MonoBehaviour
             Crosshair.SetActive(false);
             playerMovement.lookSpeed = 1f;
             Player1Animator.SetBool("IsAiming", true);
+            SpawnPosition = ADSBone.transform;
+            ADSing = true;
         }
 
         if (Input.GetMouseButtonUp(1))
@@ -65,6 +84,8 @@ public class GunController : MonoBehaviour
             Crosshair.SetActive(true);
             playerMovement.lookSpeed = 2;
             Player1Animator.SetBool("IsAiming", false);
+            SpawnPosition = NormalView.transform;
+            ADSing = false;
         }
         
         if (!CanShoot)
