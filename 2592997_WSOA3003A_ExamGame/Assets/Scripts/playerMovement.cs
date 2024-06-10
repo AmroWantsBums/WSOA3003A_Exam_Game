@@ -45,14 +45,13 @@ public class playerMovement : MonoBehaviour
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
         float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("MouseVertical") : 0;
         float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("MouseHorizontal") : 0;
-        if (Input.GetKey(KeyCode.W) && !gunController.IsShooting)
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) && !gunController.IsShooting)
         {
             Player1Animator.SetBool("IsRunning", true);
         }
         else
         {
             Player1Animator.SetBool("IsRunning", false);
-            Debug.Log("Set to false");
         }
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);

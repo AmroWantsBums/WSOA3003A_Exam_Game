@@ -17,7 +17,10 @@ public class Player2GunController : MonoBehaviour
     public Player2Movement player2Movement;
     public Slider FireCooldown;
     public float Seconds = 1.5f;
-
+    public Animator Player2Animator;
+    public bool IsShooting = false;
+    public GameObject ADSBone;
+    public bool ADSing = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,21 +30,39 @@ public class Player2GunController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetAxis("R2Trigger") > -0.02f)
+        if (Input.GetAxis("R2Trigger") > -0.02f && CanShoot)
         {
             Debug.Log("Fired");
-            if (CanShoot)
+            if (CanShoot && ADSing)
             {
-                Vector3 aimDirection = NormalView.transform.up;
+                Player2Animator.SetBool("IsShooting", true);
+                Vector3 aimDirection = ADSBone.transform.forward;
                 Quaternion bulletRotation = Quaternion.LookRotation(aimDirection);
                 GameObject bullet = Instantiate(BulletPrefab, SpawnPosition.position, bulletRotation);
                 Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
+                IsShooting = true;
                 if (bulletRigidbody != null)
                 {
                     bulletRigidbody.velocity = transform.forward * BulletSpeed;
                 }
                 CanShoot = false;
-                Seconds = 1.5f;
+                Seconds = 1f;
+            }
+            else
+            {
+                Player2Animator.SetBool("IsShooting", true);
+                Vector3 aimDirection = NormalView.transform.up;
+                Quaternion bulletRotation = Quaternion.LookRotation(aimDirection);
+                GameObject bullet = Instantiate(BulletPrefab, SpawnPosition.position, bulletRotation);
+                Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
+                IsShooting = true;
+                if (bulletRigidbody != null)
+                {
+                    bulletRigidbody.velocity = transform.forward * BulletSpeed;
+                }
+                CanShoot = false;
+                Seconds = 1f;
+
             }
         }
 
@@ -77,6 +98,7 @@ public class Player2GunController : MonoBehaviour
             {
                 CanShoot = true;
                 Crosshair.SetActive(true);
+                Player2Animator.SetBool("IsShooting", false);
             }
         }
     }

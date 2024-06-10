@@ -15,7 +15,7 @@ public class Player2Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (HealthPoints < 0)
+        if (HealthPoints <= 0)
         {
             animator.SetBool("IsDying", true);
         }

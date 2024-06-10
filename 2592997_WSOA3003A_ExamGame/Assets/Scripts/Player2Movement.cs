@@ -20,6 +20,8 @@ public class Player2Movement : MonoBehaviour
     private bool canMove = true;
 
     private CharacterController _characterController;
+    public Player2GunController gunController;
+    public Animator Player2Animator;
 
     public void Start()
     {
@@ -30,6 +32,7 @@ public class Player2Movement : MonoBehaviour
 
     public void Update()
     {
+        Debug.Log(Input.GetAxis("ControllerVertical"));
         #region Handles Movement
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
@@ -40,6 +43,14 @@ public class Player2Movement : MonoBehaviour
         float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("ControllerHorizontal") : 0;
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+        if (Input.GetAxis("ControllerVertical") != 0 && !gunController.IsShooting)
+        {
+            Player2Animator.SetBool("IsRunning", true);
+        }
+        else
+        {
+            Player2Animator.SetBool("IsRunning", false);
+        }
         #endregion
 
         /*#region Handles Jumping
