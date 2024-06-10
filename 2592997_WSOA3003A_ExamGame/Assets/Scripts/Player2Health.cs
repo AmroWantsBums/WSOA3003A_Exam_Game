@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player2Health : MonoBehaviour
 {
-    public float HealthPoints = 100f;
+    public float HealthPoints = 200f;
     public Animator animator;
+    public Slider HealthBar;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +21,6 @@ public class Player2Health : MonoBehaviour
         {
             animator.SetBool("IsDying", true);
         }
+        HealthBar.value = HealthPoints;
     }
 }
