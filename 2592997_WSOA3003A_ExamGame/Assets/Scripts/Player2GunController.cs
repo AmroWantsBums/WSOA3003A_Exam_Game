@@ -33,7 +33,6 @@ public class Player2GunController : MonoBehaviour
     {
         if (Input.GetAxis("R2Trigger") > -0.02f && CanShoot)
         {
-            Debug.Log("Fired");
             if (CanShoot && ADSing)
             {
                 Player2Animator.SetBool("IsShooting", true);
@@ -44,7 +43,7 @@ public class Player2GunController : MonoBehaviour
                 IsShooting = true;
                 if (bulletRigidbody != null)
                 {
-                    bulletRigidbody.velocity = transform.forward * BulletSpeed;
+                    bulletRigidbody.velocity = ADSBone.transform.forward * BulletSpeed;
                 }
                 CanShoot = false;
                 Seconds = 1f;

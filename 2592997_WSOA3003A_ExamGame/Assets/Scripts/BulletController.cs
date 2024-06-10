@@ -29,26 +29,32 @@ public class BulletController : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        
-        if (col.gameObject.name == "Player")
+        Debug.Log(col.gameObject.name);
+        if (col.gameObject.name == "Player1Headshot")
         {
             Destroy(gameObject);
-            playerHealth.HealthPoints = playerHealth.HealthPoints - 33.4f;            
+            playerHealth.HealthPoints = playerHealth.HealthPoints - 70f;
+            Player1HeadshotCanvas();
+        }
+
+        if (col.gameObject.name == "Player1Bodyshot")
+        {
+            Destroy(gameObject);
+            Player2Health.HealthPoints = Player2Health.HealthPoints - 33.4f;
+            Player1BodyShotCanvas();
         }
 
         if (col.gameObject.name == "Player2Headshot")
         {
             Destroy(gameObject);
-            Player2Health.HealthPoints = playerHealth.HealthPoints - 70f;
-            Debug.Log("Headshot");
+            Player2Health.HealthPoints = Player2Health.HealthPoints - 70f;
             HeadshotCanvas();
         }
 
         if (col.gameObject.name == "Player2Bodyshot")
         {
             Destroy(gameObject);
-            Player2Health.HealthPoints = 0f;
-            Debug.Log("BodyShot");
+            Player2Health.HealthPoints = Player2Health.HealthPoints - 33.4f;
             BodyShotCanvas();
         }
 
@@ -71,6 +77,24 @@ public class BulletController : MonoBehaviour
     public void HeadshotCanvas()
     {
         Vector3 direction = Player2.transform.position - Player.transform.position;
+        direction = Vector3.Normalize(direction);
+        Quaternion rotation = Quaternion.LookRotation(direction);
+        Vector3 SpawnPosition = new Vector3(Player2.transform.position.x, Player2.transform.position.y + 3.5f, Player2.transform.position.z);
+        Instantiate(HeadshotDamageCanvas, SpawnPosition, rotation);
+    }
+
+    public void Player1BodyShotCanvas()
+    {
+        Vector3 direction = Player.transform.position - Player2.transform.position;
+        direction = Vector3.Normalize(direction);
+        Quaternion rotation = Quaternion.LookRotation(direction);
+        Vector3 SpawnPosition = new Vector3(Player2.transform.position.x, Player2.transform.position.y + 3.5f, Player2.transform.position.z);
+        Instantiate(DamageCanvas, SpawnPosition, rotation);
+    }
+
+    public void Player1HeadshotCanvas()
+    {
+        Vector3 direction = Player.transform.position - Player2.transform.position;
         direction = Vector3.Normalize(direction);
         Quaternion rotation = Quaternion.LookRotation(direction);
         Vector3 SpawnPosition = new Vector3(Player2.transform.position.x, Player2.transform.position.y + 3.5f, Player2.transform.position.z);
