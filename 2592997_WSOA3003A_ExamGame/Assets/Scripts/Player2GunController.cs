@@ -21,6 +21,7 @@ public class Player2GunController : MonoBehaviour
     public bool IsShooting = false;
     public GameObject ADSBone;
     public bool ADSing = false;
+    public bool CanADS = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +48,9 @@ public class Player2GunController : MonoBehaviour
                 }
                 CanShoot = false;
                 Seconds = 1f;
+                CanADS = false;
+                NormalView.enabled = true;
+                ADSView.enabled = false;
             }
             else
             {
@@ -62,28 +66,29 @@ public class Player2GunController : MonoBehaviour
                 }
                 CanShoot = false;
                 Seconds = 1f;
-
+                CanADS = false;
+                NormalView.enabled = true;
+                ADSView.enabled = false;
             }
         }
 
-        if (Input.GetAxis("L2Trigger") > -0.02f)
+        if (Input.GetAxis("L2Trigger") > -0.02f && CanADS)
         {
             NormalView.enabled = false;
             ADSView.enabled = true;
+            ADSing = true;
             Crosshair.SetActive(false);
             player2Movement.lookSpeed = 1f;
+            Player2Animator.SetBool("IsAiming", true);
         }
         else
         {
-            NormalView.enabled = true;
-            ADSView.enabled = false;
-            Crosshair.SetActive(true);
-            player2Movement.lookSpeed = 2;
+            DisableADS();
         }
 
-        if (Input.GetButton("L2Trigger"))
+        if (player2Movement.IsRunning)
         {
-           
+            DisableADS();
         }
 
         if (!CanShoot)
@@ -99,7 +104,17 @@ public class Player2GunController : MonoBehaviour
                 CanShoot = true;
                 Crosshair.SetActive(true);
                 Player2Animator.SetBool("IsShooting", false);
+                CanADS = true;
             }
         }
+    }
+
+    public void DisableADS()
+    {
+        NormalView.enabled = true;
+        ADSView.enabled = false;
+        Crosshair.SetActive(true);
+        player2Movement.lookSpeed = 2;
+        Player2Animator.SetBool("IsAiming", false);
     }
 }
