@@ -11,7 +11,7 @@ public class Player2Movement : MonoBehaviour
     public float JumpPower = 7f;
     public float gravity = 10f;
 
-    public float lookSpeed = 2f;
+    public float lookSpeed;
     public float lookXLimit = 45f;
 
     private Vector3 moveDirection = Vector3.zero;

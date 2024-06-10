@@ -113,7 +113,7 @@ public class Player2GunController : MonoBehaviour
         NormalView.enabled = true;
         ADSView.enabled = false;
         Crosshair.SetActive(true);
-        player2Movement.lookSpeed = 2;
+        player2Movement.lookSpeed = 4;
         Player2Animator.SetBool("IsAiming", false);
     }
 }
