@@ -6692,6 +6692,12 @@ MonoBehaviour:
   HealthPoints: 200
   animator: {fileID: 1582174156}
   HealthBar: {fileID: 2035475139}
+  gunController: {fileID: 963194229}
+  Player2gunController: {fileID: 462999419}
+  WinnerCamera: {fileID: 963194227}
+  LoserCamera: {fileID: 462999418}
+  Canvas1: {fileID: 1753437082}
+  Canvas2: {fileID: 1257178073}
 --- !u!23 &1345943614
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7229,7 +7235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1454140956
 Transform:
   m_ObjectHideFlags: 0
@@ -9345,6 +9351,12 @@ MonoBehaviour:
   HealthPoints: 200
   HealthBar: {fileID: 414440014}
   animator: {fileID: 248723036}
+  gunController: {fileID: 963194229}
+  Player2gunController: {fileID: 462999419}
+  WinnerCamera: {fileID: 462999418}
+  LoserCamera: {fileID: 963194227}
+  Canvas1: {fileID: 1753437082}
+  Canvas2: {fileID: 1257178073}
 --- !u!4 &1863736030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 0a33bac1074a2a945b55ab00d20b84a6, type: 3}
