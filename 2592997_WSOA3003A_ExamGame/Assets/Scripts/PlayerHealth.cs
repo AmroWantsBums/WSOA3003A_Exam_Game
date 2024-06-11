@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -38,6 +39,14 @@ public class PlayerHealth : MonoBehaviour
             Canvas2.SetActive(false);
             PlayerNumberText.text = "Two";
             EndOfGameAnimator.SetBool("GameOver", true);
+            StartCoroutine(RestartGame());
+        }
+
+        IEnumerator RestartGame()
+        {
+            yield return new WaitForSeconds(4f);
+            SceneManager.LoadScene("MenuScene");
         }
     }
 }
+
