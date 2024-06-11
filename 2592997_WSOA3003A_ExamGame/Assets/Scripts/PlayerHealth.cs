@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerHealth : MonoBehaviour
     public Camera LoserCamera;
     public GameObject Canvas1;
     public GameObject Canvas2;
+    public Animator EndOfGameAnimator;
+    public TextMeshProUGUI PlayerNumberText;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +36,8 @@ public class PlayerHealth : MonoBehaviour
             LoserCamera.enabled = false;
             Canvas1.SetActive(false);
             Canvas2.SetActive(false);
+            PlayerNumberText.text = "Two";
+            EndOfGameAnimator.SetBool("GameOver", true);
         }
     }
 }
