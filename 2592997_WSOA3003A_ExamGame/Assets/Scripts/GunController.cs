@@ -22,6 +22,7 @@ public class GunController : MonoBehaviour
     public GameObject ADSBone;
     public bool ADSing = false;
     public bool CanADS = true;
+    public AudioSource BulletAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +52,7 @@ public class GunController : MonoBehaviour
                 Player1Animator.SetBool("IsShooting", true);
                 NormalView.enabled = true;
                 ADSView.enabled = false;
+                BulletAudio.Play();
             }
             else
             {
@@ -69,6 +71,7 @@ public class GunController : MonoBehaviour
                 CanADS = false;
                 NormalView.enabled = true;
                 ADSView.enabled = false;
+                BulletAudio.Play();
             }            
         }
 
