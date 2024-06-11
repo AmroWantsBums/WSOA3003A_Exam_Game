@@ -23,6 +23,7 @@ public class Player2Movement : MonoBehaviour
     public Player2GunController gunController;
     public Animator Player2Animator;
     public bool IsRunning = false;
+    public AudioSource RunSource;
 
     public void Start()
     {
@@ -33,6 +34,21 @@ public class Player2Movement : MonoBehaviour
 
     public void Update()
     {
+        if (IsRunning)
+        {
+            if (RunSource.isPlaying)
+            {
+
+            }
+            else
+            {
+                RunSource.Play();
+            }
+        }
+        else
+        {
+            RunSource.Stop();
+        }
         #region Handles Movement
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
