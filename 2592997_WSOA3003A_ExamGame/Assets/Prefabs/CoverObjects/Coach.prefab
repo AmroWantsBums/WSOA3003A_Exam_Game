@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: -5191852444610821398}
   m_Layer: 13
   m_Name: Coach
-  m_TagString: Untagged
+  m_TagString: Props
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

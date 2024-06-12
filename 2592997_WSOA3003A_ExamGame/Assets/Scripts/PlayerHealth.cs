@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject Canvas2;
     public Animator EndOfGameAnimator;
     public TextMeshProUGUI PlayerNumberText;
+    public playerMovement playerMovement;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
             animator.SetBool("IsDying", true);
             gunController.enabled = false;
             Player2gunController.enabled = false;
+            playerMovement.enabled = false;
             WinnerCamera.rect = new Rect(0f, 0f, 1f, 1f);
             LoserCamera.enabled = false;
             Canvas1.SetActive(false);

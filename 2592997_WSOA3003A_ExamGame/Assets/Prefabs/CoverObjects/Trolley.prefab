@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: -8435564289466644899}
   m_Layer: 13
   m_Name: Trolley
-  m_TagString: Untagged
+  m_TagString: Props
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

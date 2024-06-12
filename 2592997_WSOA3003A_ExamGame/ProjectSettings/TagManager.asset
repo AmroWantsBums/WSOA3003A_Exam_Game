@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SafeSpace
   - Crates
+  - Props
   layers:
   - Default
   - TransparentFX

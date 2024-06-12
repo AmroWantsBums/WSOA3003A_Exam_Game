@@ -64,6 +64,11 @@ public class BulletController : MonoBehaviour
             Destroy(col.gameObject);
             Destroy(gameObject);
         }
+
+        if (col.gameObject.CompareTag("Props"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void BodyShotCanvas()

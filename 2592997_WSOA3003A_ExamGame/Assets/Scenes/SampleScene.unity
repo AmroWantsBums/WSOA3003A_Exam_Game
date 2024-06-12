@@ -7308,6 +7308,7 @@ MonoBehaviour:
   Canvas2: {fileID: 1257178073}
   EndOfGameAnimator: {fileID: 1171450349}
   PlayerNumberText: {fileID: 983042343}
+  player2Movement: {fileID: 1345943617}
 --- !u!23 &1345943614
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7845,7 +7846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1454140956
 Transform:
   m_ObjectHideFlags: 0
@@ -9969,6 +9970,7 @@ MonoBehaviour:
   Canvas2: {fileID: 1257178073}
   EndOfGameAnimator: {fileID: 1171450349}
   PlayerNumberText: {fileID: 983042343}
+  playerMovement: {fileID: 1863468437}
 --- !u!4 &1863736030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 0a33bac1074a2a945b55ab00d20b84a6, type: 3}
