@@ -9,6 +9,7 @@ public class MenuController : MonoBehaviour
     public GameObject VideoObject;
     public VideoPlayer TutorialVideo;
     public GameObject ControlsPanel;
+    public AudioSource ControlsAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,7 @@ public class MenuController : MonoBehaviour
     {
         VideoObject.SetActive(false);
         ControlsPanel.SetActive(true);
+        ControlsAudio.Play();
     }
 
     void OnDestroy()

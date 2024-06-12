@@ -572,7 +572,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353936457}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: ad7ffdc1b2824ca4195e6870cbfddda6, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: c134ce89b746508469e8a24e391e24f4, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -2320,6 +2320,7 @@ MonoBehaviour:
   VideoObject: {fileID: 2036905212}
   TutorialVideo: {fileID: 353936459}
   ControlsPanel: {fileID: 1262629271}
+  ControlsAudio: {fileID: 1401305627}
 --- !u!82 &1401305627
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2330,8 +2331,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: c35a98cee09d583468a9e532850895ee, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
